@@ -15,7 +15,7 @@ struct AddView: View {
     @State private var textFieldText: String = ""
     @State private var showAlert: Bool = false
     @State private var alertTitle: String = ""
-    private let color = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+    private let color = UIColor.secondarySystemBackground
     
     var body: some View {
         ScrollView {
