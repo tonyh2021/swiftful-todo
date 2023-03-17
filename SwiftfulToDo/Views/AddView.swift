@@ -14,8 +14,26 @@ struct AddView: View {
     
     var body: some View {
         ScrollView {
-            TextField("Type todo here...", text: $textField)
-                .background(Color(color))
+            VStack {
+                TextField("Type todo here...", text: $textField)
+                    .padding(.horizontal)
+                    .frame(height: 55)
+                    .background(Color(color))
+                    .cornerRadius(10)
+                Button {
+                    print("tapped...")
+                    
+                } label: {
+                    Text("Save".uppercased())
+                        .foregroundColor(.white)
+                        .font(.headline)
+                        .frame(height: 55)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.accentColor)
+                        .cornerRadius(10)
+                }
+            }
+            .padding(14)
         }
         .navigationTitle("Add an Item ✏️")
     }
